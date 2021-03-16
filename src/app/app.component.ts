@@ -18,7 +18,8 @@ export class AppComponent implements OnInit {
     this.items = [
         {
             label: 'Publications',
-            icon: 'pi pi-book'
+            icon: 'pi pi-book',
+            routerLink: ['/publication']
         }
     ];
 }

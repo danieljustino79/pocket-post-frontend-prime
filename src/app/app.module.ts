@@ -1,23 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import {MenubarModule} from 'primeng/menubar';
-import { SharedModule } from 'primeng/api';
+import { SharedPrimengModule } from './shared/shared-primeng/shared-primeng.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PublicationComponent } from './publication/publication.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PublicationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule,
-    MenubarModule,
-    SharedModule
+    SharedPrimengModule
   ],
   providers: [],
   bootstrap: [AppComponent]
