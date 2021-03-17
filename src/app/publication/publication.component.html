@@ -5,6 +5,7 @@
             <th>Title</th>
             <th>Content</th>
             <th>Level</th>
+            <th>Options</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-publication>
@@ -13,6 +14,11 @@
             <td>{{publication.title}}</td>
             <td>{{publication.content}}</td>
             <td>{{publication.accessLevel}}</td>
+            <td>
+                <button pButton icon="pi pi-eye" 
+                class="p-button-primary p-mr-2" 
+                (click)="showPublication(publication)"></button>
+            </td>
         </tr>
     </ng-template>
   </p-table>

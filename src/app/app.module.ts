@@ -8,11 +8,13 @@ import { SharedPrimengModule } from './shared/shared-primeng/shared-primeng.modu
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PublicationComponent } from './publication/publication.component';
+import { PublicationDetailComponent } from './publication/publication-detail/publication-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PublicationComponent
+    PublicationComponent,
+    PublicationDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -18,4 +18,11 @@ export class PublicationService {
      return this.http.get(url)
      .pipe(map(x => x['data']));
   }
+
+  publication_by_id(id: number): Observable<Publication>{
+    let url = `${API_URL}publication/${id}`;
+
+     return this.http.get(url)
+     .pipe(map(x => x['data']['0']));
+  }
 }
