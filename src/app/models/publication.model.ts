@@ -5,5 +5,5 @@ export interface Publication{
     tags:string;
     previous:number;
     next:number;
-    access_level:number;
+    accessLevel:number;
 }

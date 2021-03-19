@@ -1,0 +1,40 @@
+<p-messages [(value)]="msgs" ></p-messages>
+<form novalidate [formGroup]="publicationForm">
+    <input type="hidden" formControlName="id" >
+    <div class="p-fluid">
+        <div class="p-field">
+            <label for="title">Title</label>
+            <input id="title" type="text" 
+            pInputText formControlName="title"/> 
+        </div>
+        <div class="p-field">
+            <label for="content">Content</label>
+            <textarea rows="5" cols="30" autoResize="autoResize" 
+            pInputTextarea formControlName="content"></textarea>
+        </div>
+        <div class="p-field">
+            <label for="accessLevel">Access Level</label>
+            <p-dropdown [options]="accessOptions" optionLabel="description" optionValue="value"
+            formControlName="accessLevel" ></p-dropdown>
+        </div>   
+        <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col">
+                <label for="previous">Previous</label>
+                <p-dropdown [options]="previousOptions" optionLabel="description" optionValue="value"
+                formControlName="previous" ></p-dropdown>
+            </div>
+            <div class="p-field p-col">
+                <label for="next">Next</label>
+                <p-dropdown [options]="nextOptions" optionLabel="description" optionValue="value"
+                formControlName="next" ></p-dropdown>
+            </div>
+        </div>
+        <div class="p-field">
+            <label for="tags">Tags</label>
+            <p-autoComplete id="tags" formControlName="tags" 
+            [suggestions]="results" (completeMethod)="search($event)" [multiple]="true"></p-autoComplete>
+        </div> 
+        <p-button label="Salvar"
+        (click)="updatePublication(publicationForm.value)"></p-button>
+    </div>
+</form>

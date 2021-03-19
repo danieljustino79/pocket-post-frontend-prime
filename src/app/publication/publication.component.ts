@@ -14,9 +14,7 @@ export class PublicationComponent implements OnInit {
 
   constructor(
     private publicationService: PublicationService,
-    private router: Router) { 
-    this.publications = [];
-  }
+    private router: Router) { }
 
   ngOnInit(): void {
     this.publicationService.publications().subscribe(x => this.publications = x);
@@ -24,6 +22,10 @@ export class PublicationComponent implements OnInit {
 
   showPublication(publication: Publication){
     this.router.navigateByUrl(`publication/${publication.id}`);
+  }
+
+  editPublication(publication: Publication){    
+    this.router.navigateByUrl(`publication/edit/${publication.id}`);
   }
 
 }
