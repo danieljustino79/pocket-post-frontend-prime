@@ -5,6 +5,7 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {DropdownModule} from 'primeng/dropdown';
+import {InputSwitchModule} from 'primeng/inputswitch';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {MenubarModule} from 'primeng/menubar';
@@ -23,6 +24,7 @@ import { SharedModule } from 'primeng/api';
     ButtonModule,
     CardModule,
     DropdownModule,
+    InputSwitchModule,
     InputTextModule,
     InputTextareaModule,
     MenubarModule,
@@ -36,6 +38,7 @@ import { SharedModule } from 'primeng/api';
     ButtonModule,
     CardModule,
     DropdownModule,
+    InputSwitchModule,
     InputTextModule,
     InputTextareaModule,
     MenubarModule,

@@ -21,6 +21,8 @@ export class PublicationEditComponent implements OnInit {
   results: any[];
   msgs = [];
 
+  descriptionModeChecked = false;
+
   constructor(
     private publicationService: PublicationService,
     private route: ActivatedRoute,
@@ -128,4 +130,7 @@ export class PublicationEditComponent implements OnInit {
     this.results = ['api', 'backend', 'command-line', 'design', 'frontend', 'http', 'infra', 'security', 'storage', 'test', 'linux'];
   }
 
+  handleChangeDescriptionMode(ev){
+    this.descriptionModeChecked = ev.checked;
+  }
 }
