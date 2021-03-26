@@ -1,10 +1,11 @@
 <p-messages [(value)]="msgs" ></p-messages>
 <form novalidate [formGroup]="publicationForm">
     <input type="hidden" formControlName="id" >
-    <div class="p-grid">
-        <div class="p-col-1 p-offset-11">
-            Description mode
-            <p-inputSwitch [(ngModel)]="descriptionModeChecked" (onChange)="handleChangeDescriptionMode($event)"></p-inputSwitch>
+    <div class="p-d-flex p-jc-between">
+        <div></div>
+        <div>
+            <label>Description mode </label>
+            <p-inputSwitch (onChange)="handleChangeDescriptionMode($event)"></p-inputSwitch>
         </div>
     </div>
     <div class="p-fluid">
